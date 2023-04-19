@@ -4,7 +4,7 @@ import './PacmanSpinner.css'
 export const Pacmanspinner = () => {
     return (
         <div>
-            <div class="loadingio-spinner-bean-eater-3vg04t42rts"><div class="ldio-swxrpcth25a">
+            <div className="loadingio-spinner-bean-eater-3vg04t42rts"><div className="ldio-swxrpcth25a">
                 <div><div></div><div></div><div></div></div><div><div></div><div>
                 </div><div></div></div>
             </div></div>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import { Pacmanspinner } from "./components/Pacmanspinner";
 import { Quote } from "./components/Quote";
-import { Spinner } from "./components/Spinner";
-
 
 const initialQuote = {
   text: "Quote",
@@ -18,7 +16,7 @@ const App = () => {
   //llamada asincrona con fetch, el useeffect no acepta parametro async directamente
   const uppDateQuote = async () => {
     setLoading(true)
-    const url = "https://www.breakingbadapi.com/api/quote/random"
+    const url = "https://api.breakingbadquotes.xyz/v1/quotes"
     const response = await fetch(url)
 
     //desestruturacción de informacion
@@ -36,7 +34,7 @@ const App = () => {
 
 
   const spinner = () => {
-  const time =  loading ? <Pacmanspinner /> : <Quote quote={quote}/>
+    const time = loading ? <Pacmanspinner /> : <Quote quote={quote} />
     setTimeout(() => {
       spinner()
     }, 3000);
